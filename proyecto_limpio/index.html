@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="css/jquery.easy_slides.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.easy_slides.js"></script>
+
+    <style>
+
+@font-face {
+    font-family: myFont;
+    src: url('./font/font.otf');
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+
+}
+.center-cropped {
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.text-style{
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: 100px;
+    font-family: myFont;
+    font-size: 2.5em;
+}
+    </style>
+
+</head>
+<body>
+    <section>
+    <h2>4 in line</h2>
+    <div class="slider slider_four_in_line">
+        <div style="background-image: url(./img/op1.jpg)" class="hidden center center-cropped"> <p class="text-style">Imagen 1</p></div>
+        <div style="background-image: url(./img/op2.jpg)" class="hidden center center-cropped"><p class="text-style">Imagen 2</p></div>
+        <div style="background-image: url(./img/op3.jpeg)" class="hidden center center-cropped"><p class="text-style">Imagen 3</p></div>
+        <div style="background-image: url(./img/op4.jpg)" class="next2 center center-cropped"><p class="text-style">Imagen 4</p></div>
+        <div style="background-image: url(./img/op5.jpeg)" class="next1 center center-cropped"><p class="text-style">Imagen 5</p></div>
+        <div style="background-image: url(./img/op6.jpeg)" class="active center center-cropped"><p class="text-style">Imagen 6</p></div>
+        <div style="background-image: url(./img/op7.jpg)" class="prev1 center center-cropped"><p class="text-style">Imagen 7</p></div>
+        <div style="background-image: url(./img/op8.jpg)" class="prev1 center center-cropped"><p class="text-style">Imagen 8</p></div>
+        <div style="background-image: url(./img/op9.jpg)" class="prev2 center center-cropped"><p class="text-style">Imagen 9</p></div>
+        <div class="next_button"></div>
+        <div class="prev_button"></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.slider_four_in_line').EasySlides({
+                'autoplay': false,
+                'show': 9
+            })
+        });
+    </script>
+</section>
+</body>
+</html>
+
